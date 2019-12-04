@@ -19,11 +19,11 @@ export class SidenavComponent implements OnInit {
     {
       name: 'Queue',
       route: 'queue'
-    },
-    {
-      name: 'Settings',
-      route: 'settings'
     }
+    // {
+    //   name: 'Settings',
+    //   route: 'settings'
+    // }
   ];
   playlistItems: any[];
 
