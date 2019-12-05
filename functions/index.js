@@ -80,6 +80,19 @@ app.post(basePath + '/spotify/tracks', (req, res) => {
 	}
 });
 
+app.post(basePath + '/login', (req, res) => {
+	const email = req.body.email;
+	const password = req.body.password;
+
+	database.getIdToken(email, password)
+	.then(thing => {
+		res.send(thing);
+	})
+	.catch(error => {
+		res.send(error);
+	})
+});
+
 app.post(basePath + '/spotify/track', (req, res) => {
   const trackId = req.body.trackId;
 
